@@ -2,8 +2,8 @@
 /* body css */
 body {
     background-image: url("imaging/247.jpg");
-    width: 100vw;
-    height: 100vh;
+    width: 900px;
+    height: 700px;
     position: absolute;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -32,7 +32,7 @@ body {
     left: 450px;
 }
 
-#missile {
+#missiles {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -44,4 +44,5 @@ body {
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
+    position: relative;
 }
