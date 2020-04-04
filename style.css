@@ -23,13 +23,19 @@ body {
 /* bad guys */
 .baddies {
     background-image: url("imaging/ufo.png");
-    background-size: 50px;
+    background-size: 45px;
     height: 100%;
     width: 100%;
     position: absolute;
     background-repeat: no-repeat;
-    top: 50px;
-    left: 450px;
+    /* top: 50px;
+    left: 450px; */
+}
+
+#baddies {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
 }
 
 #missiles {
