@@ -30,6 +30,14 @@ As my game is not yet finished, there are a lot of things I still want to add to
 
 The hardest part about the game was hands down getting the collision detection to work. I went through a lot of trial and error to figure out what exactly was going on behind the scenes with it, which ultimately helped me fix a lot of hidden problems I had with the game itself. While the actual function I created for collision detection was only a couple lines, I had to create a series of console logs to make make sure everything I had written was working properly, and I am so relieved to say that I finally got it to work.
 
+### Credits
+
+All image resources were obtained from the following users @ Freepik.com
+
+Background: alicia_mb
+Player Spaceship: flaticon
+Enemy Spaceship: flaticon
+
 ### Give it a try!
 
 https://matthart888.github.io/
