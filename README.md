@@ -24,7 +24,7 @@ The idea behind unit collision was to figure out a way to register that the miss
 
 ### More to come!
 
-As my game is not yet finished, there are a lot of things I still want to add to the game. Things like being able to move the player based on your mouse, rather than solely left to right, have the enemies move left and right on a timer, and eventually fire back, and of course, have the individula space ships dissappear when the missile collides into them, rather than all of them at once. Getting the playing field to be reactive would also be a huge bonus.
+As my game is not yet finished, there are a lot of things I still want to add to the game. Finish the start menu, and have it prompt up before the game begins, have the enemies move left and right on a timer, and eventually fire back, and of course, have the individula space ships dissappear when the missile collides into them, rather than all of them at once. Getting the playing field to be reactive would also be a huge bonus.
 
 ### Challenges
 
