@@ -17,8 +17,8 @@ body {
     width: 100%;
     position: absolute;
     background-repeat: no-repeat;
-    top: 500px;
-    left: 450px;
+    /* top: 500px;
+    left: 450px; */
 }
 /* bad guys */
 .baddies {

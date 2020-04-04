@@ -43,17 +43,28 @@ const badGuys = [
 
 
 
+// const movePlayer = (evt) => {
+//     console.log(evt)
+//     if (evt.key === "ArrowLeft"){
+//         guardian.left -= 10
+//         $("#guardian").css("left", guardian.left)
+//     } else if (evt.key === "ArrowRight"){
+//         guardian.left += 10
+//         $("#guardian").css("left", guardian.left)
+//     };
+
+// };
+let mouse = {
+    x: innerWidth / 2,
+    y: innerHeight / 2
+}
+
 const movePlayer = (evt) => {
-    console.log(evt)
-    if (evt.key === "ArrowLeft"){
-        guardian.left -= 10
-        $("#guardian").css("left", guardian.left)
-    } else if (evt.key === "ArrowRight"){
-        guardian.left += 10
-        $("#guardian").css("left", guardian.left)
-    };
-    
-};
+    mouse.x = evt.clientX;
+    $("#guardian").css("left", mouse.x);
+    mouse.y = evt.clientY;
+    $("#guardian").css("top", mouse.y)
+}
 
 const drawMissile = (evt) => {
     if (evt.key === " "){
@@ -66,7 +77,7 @@ const drawMissile = (evt) => {
         //     // let currentMissile = $("#missiles").children().toArray()
             $("#missiles").empty()
             // for (let playerFire = 0; playerFire < currentMissile.length; playerFire ++){
-            let $newMissile = $("<div>").addClass("missile").css({ "left": guardian.left +3, "top": guardian.top})
+            let $newMissile = $("<div>").addClass("missile").css({ "left": mouse.x +3, "top": mouse.y})
             $newMissile.appendTo("#missiles")
             missiles.push($newMissile)
             $newMissile.animate({
@@ -112,16 +123,17 @@ const unitCollision = () =>
 };
 
 const startGame = () => {
-    $(document).on("keydown", movePlayer)
+    // $(document).on("keydown", movePlayer)
+    $(document).on("mouseover", movePlayer)
     $(document).on("keydown", drawMissile)
     drawBaddies()
     // unitCollision()
-}
+};
 
 
 $(() => {
     
     // $(document).on("click", startGame)
-    startGame()
+    startGame();
 
 });
