@@ -9,6 +9,13 @@ A Space Invaders Game.
 
 You play as Gordon and Gayle, the Galaxy's Greatest Guardians, and the commanders and operators of the USS Guardia! Once again, Gayle and Gordon are being called to the front lines as Earth is under attack from the invaders of space! It's your job to give them a hand and defeat the baddies!
 
+### Technologies Used
+
+HTML
+CSS
+Javascript
+JQuery
+
 ### My Approach
 
 The basic outline for the game was first to create objects for the aliens and the Guardia (the player ship). After doing so, we would make a function to create a missile that would be fired from the player ship, and find a way to move the missile after it's been fired. Once the missile fire works properly, I needed to figure out how to get unit collision to work. 
