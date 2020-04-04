@@ -11,10 +11,14 @@ You play as Gordon and Gayle, the Galaxy's Greatest Guardians, and the commander
 
 ### Technologies Used
 
-HTML
-CSS
-Javascript
-JQuery
+#### HTML
+
+#### CSS
+
+#### Javascript
+
+#### JQuery
+
 
 ### My Approach
 
