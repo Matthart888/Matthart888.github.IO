@@ -1,7 +1,7 @@
 # Matthart888.github.IO
 
 
-## Galaxy's Greatest Guardian
+## Galaxy's Greatest Guardians
 
 ### Concept
 
