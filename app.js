@@ -66,15 +66,15 @@ const drawMissile = (evt) => {
         //     // let currentMissile = $("#missiles").children().toArray()
             $("#missiles").empty()
             // for (let playerFire = 0; playerFire < currentMissile.length; playerFire ++){
-                let newMissile = $("<div>").addClass("missile").css({ "left": guardian.left +3, "top": guardian.top})
-                newMissile.appendTo("#missiles")
-                missiles.push(newMissile)
-                newMissile.animate({
-                    top: 0
-                }, {
-                    step: unitCollision
-                }); 
-            };
+            let $newMissile = $("<div>").addClass("missile").css({ "left": guardian.left +3, "top": guardian.top})
+            $newMissile.appendTo("#missiles")
+            missiles.push($newMissile)
+            $newMissile.animate({
+                top: 0
+            }, {
+                step: unitCollision
+            }); 
+    };
 };
 
 
@@ -83,7 +83,9 @@ const drawMissile = (evt) => {
 
 const drawBaddies = () => {
     for (let numOfBaddies = 0; numOfBaddies < badGuys.length; numOfBaddies ++){
-        $("<div>").addClass("baddies").css({ "left": badGuys[numOfBaddies].left, "top": badGuys[numOfBaddies].top}).appendTo("#baddies")
+        let $newBaddy = $("<div>").addClass("baddies").css({ "left": badGuys[numOfBaddies].left, "top": badGuys[numOfBaddies].top});
+        $newBaddy.appendTo("#baddies");
+        
     };
 };
 
@@ -94,23 +96,32 @@ const unitCollision = () =>
     {
         for (let playerFire = 0; playerFire < missiles.length; playerFire ++)
         {
-            console.log("badGuys[numOfBaddies].top", badGuys[numOfBaddies].top)
-            console.log("missiles[playerFire].position().top", missiles[playerFire].position().top)
-            if (missiles[playerFire].position().top <= badGuys[numOfBaddies].top) 
-            {
+            // console.log("badGuys[numOfBaddies].top", badGuys[numOfBaddies].top)
+            // console.log("missiles[playerFire].position().top", missiles[playerFire].position().top)
+            if (
+                (missiles[playerFire].position().top <= badGuys[numOfBaddies].top + 50) && 
+                (missiles[playerFire].position().top >= badGuys[numOfBaddies].top) &&
+                (missiles[playerFire].position().left >= badGuys[numOfBaddies].left) &&
+                (missiles[playerFire].position().left <= badGuys[numOfBaddies].left +50)
+            ){
                 console.log("HIT")
-            };
+                $(".baddies").fadeOut(badGuys[numOfBaddies]);
+            }
         };
     };
 };
 
-
-
-$(() => {
-    
+const startGame = () => {
     $(document).on("keydown", movePlayer)
     $(document).on("keydown", drawMissile)
     drawBaddies()
     // unitCollision()
+}
+
+
+$(() => {
+    
+    // $(document).on("click", startGame)
+    startGame()
 
 });
